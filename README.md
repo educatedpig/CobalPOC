@@ -6,8 +6,14 @@ Run following commands under project folder
 npm install
 2) Install bower modules. 
 bower install
-3) Run grunt server. 
+3) Install gem
+gem install compass
+4) Install grunt 
+npm install -g grunt-cli
+5) Run grunt server. 
 grunt serve
+
+If you want to change port number, change it from Gruntfile.js
 
 # Other notes
 
