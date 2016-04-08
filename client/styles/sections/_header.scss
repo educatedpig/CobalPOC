@@ -12,3 +12,56 @@
     }
 }
 
+#nav-parent li.nav-item {
+    color: #ffffff;
+    padding: 0px;
+    line-height: 46px;
+    height: 47px;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -kthtml-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#nav-parent a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+#nav-parent li.nav-item a:first-child {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#nav-parent li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+#logo > a {
+    margin-top: 3px;
+    width: 115px;
+    height: 38px;
+    display: block;
+    float: left;
+    background: url(img/CobaltLogo_White.png) no-repeat 10px center;
+}
+
+.gn-trigger {
+    border-right: 1px solid #9da5ac;
+    cursor: pointer;
+}
+
+.gn-trigger .gn-icon-menu {
+    /* background: url(../images/icon-menu.png) no-repeat 0 10px; */
+    display: block;
+    min-height: 25px;
+    min-width: 28px;
+}
