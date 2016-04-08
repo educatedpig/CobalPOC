@@ -4,6 +4,14 @@
 npm install
 2) Install bower modules. 
 bower install
+
+2.*) If you don't have grunt-cli installed, then run
+npm install -g grunt-cli
+
+2.*) if you don't have compass installed (needed for SASS), then run
+gem install compass
+You need to have ruby installed to run this command
+
 3) Run grunt server. 
 grunt serve
 
