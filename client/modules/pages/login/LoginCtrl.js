@@ -16,6 +16,7 @@
       console.log('Login Controller Works!');
 
       $scope.jumpProject = function(){
+        $('#gn-menu').show();
         $location.path('project-initiation');
       }
       init();
