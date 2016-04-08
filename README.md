@@ -1,5 +1,7 @@
 # To run this project
 
+Run following commands under project folder
+
 1) Install npm modules.
 npm install
 2) Install bower modules. 
