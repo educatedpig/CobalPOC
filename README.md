@@ -1,19 +1,19 @@
 # To run this project
 
+Run following commands under project folder
+
 1) Install npm modules.
 npm install
 2) Install bower modules. 
 bower install
-
-2.*) If you don't have grunt-cli installed, then run
-npm install -g grunt-cli
-
-2.*) if you don't have compass installed (needed for SASS), then run
+3) Install gem
 gem install compass
-You need to have ruby installed to run this command
-
-3) Run grunt server. 
+4) Install grunt 
+npm install -g grunt-cli
+5) Run grunt server. 
 grunt serve
+
+If you want to change port number, change it from Gruntfile.js
 
 # Other notes
 
