@@ -6,7 +6,7 @@
 
     loginModule.controller('LoginCtrl', LoginCtrl);
 
-    function LoginCtrl ($scope) {
+    function LoginCtrl ($scope,$location) {
 
       // Bindings
       var LoginCtrl = this;
@@ -16,8 +16,7 @@
       console.log('Login Controller Works!');
 
       $scope.jumpProject = function(){
-        
-        document.location.href="http://127.0.0.1:9001/#/project-initiation"
+        $location.path('project-initiation');
       }
       init();
 
