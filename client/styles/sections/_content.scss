@@ -1,0 +1,14 @@
+.view-containter {
+    position: relative;
+}
+
+#content {
+    position: absolute;
+    top: ($header_height * 2);
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    overflow-y: auto;
+}
+

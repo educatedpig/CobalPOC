@@ -1,0 +1,14 @@
+.top-header {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height:( $header_height * 2);
+    background-color: #7D8A94;
+    @include box-shadow(0 1px 2px rgba(0,0,0,.1));
+    @media (min-width:$screen-sm) {
+        height: $header_height;
+    }
+}
+

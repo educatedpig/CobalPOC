@@ -1,0 +1,30 @@
+.dropdown-textfield-group {
+	&.input-group {
+		width: 100%;
+	}
+
+	.input-group-btn {
+		width: auto;
+
+		&:last-child {
+			.ui-select {
+				margin-left: -1px;
+				margin-right: auto;	
+			}
+		}
+	}
+
+	.ui-select {
+		width: 100%;
+
+		select {
+			min-width: 0;
+			padding: 8px 15px 8px 10px;
+		}		
+
+		&.last {
+			margin-left: -1px;
+			margin-right: auto;
+		}
+	}
+}
