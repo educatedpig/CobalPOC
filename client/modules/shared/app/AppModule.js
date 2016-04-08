@@ -20,7 +20,7 @@
         // pages
         ,'restangular'
         ,'app.login'
-
+        ,'app.projectInitiation'
 
 
     ])
