@@ -22,7 +22,7 @@
         ,'app.login'
         ,'app.projectInitiation'
         ,'app.questionnaire'
-
+        ,'app.toDo'
 
     ])
 })(); 
