@@ -10,11 +10,21 @@
 		padding: 15px 25px;
 	}
 
-	input[type=submit] {
+	input[type=button] {
 	    font-size: 16px;
 	    padding: 5px 18px;
 	    background-color: #00BFFF;
 	    color: white;
 	    border: none;
+	}
+}
+
+.submit-wrapper {
+	margin-top: 50px;
+	text-align: center;
+
+	input[type=submit] {
+		padding: 8px 15px;
+    	font-size: 18px;
 	}
 }
