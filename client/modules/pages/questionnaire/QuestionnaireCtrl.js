@@ -23,6 +23,13 @@
       QuestionnaireCtrl.setActive = function(navItem) {
         QuestionnaireCtrl.currentActive = navItem;
       }
+
+      init();
+
+      function init() {
+        $('#gn-menu').show();
+        $('#gn-logout').show();
+      }
     }
 
 })();

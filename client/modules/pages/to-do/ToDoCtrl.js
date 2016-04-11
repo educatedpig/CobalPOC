@@ -24,7 +24,8 @@
       init();
 
       function init() {
-        
+        $('#gn-menu').show();
+        $('#gn-logout').show();
       }
     }
 

@@ -16,14 +16,13 @@
       console.log('Login Controller Works!');
 
       $scope.jumpToDo = function(){
-        $('#gn-menu').show();
-        $('#gn-logout').show();
         $location.path('to-do');
       }
       init();
 
       function init() {
-        
+        $('#gn-menu').hide();
+        $('#gn-logout').hide();
       }
     }
 
