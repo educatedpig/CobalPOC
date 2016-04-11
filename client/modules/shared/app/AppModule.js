@@ -17,6 +17,10 @@
         // ,'app.table'
         // ,'app.chart
 
+        //plugins
+        ,'ui.bootstrap'
+        ,'smoothScroll'
+
         // pages
         ,'restangular'
         ,'app.login'

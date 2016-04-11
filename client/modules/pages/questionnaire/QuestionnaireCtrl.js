@@ -10,15 +10,18 @@
 
       // Bindings
       var QuestionnaireCtrl = this;
+      QuestionnaireCtrl.currentActive = '';
       // define variables
       // QuestionnaireCtrl.var = 'foo';
 
       console.log('Questionnaire Controller Works!');
 
-      init();
+      QuestionnaireCtrl.isActive = function(navItem) {
+        return QuestionnaireCtrl.currentActive === navItem;
+      }
 
-      function init() {
-
+      QuestionnaireCtrl.setActive = function(navItem) {
+        QuestionnaireCtrl.currentActive = navItem;
       }
     }
 

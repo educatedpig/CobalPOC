@@ -1,3 +1,7 @@
+html {
+	overflow: auto;
+}
+
 h1 {
 	color: black;
     font-weight: bold;
@@ -23,19 +27,31 @@ h1 {
 	}
 }
 
-ul.side-navigation {
-	.badge {
-		margin-right: 10px;
-	}
+.page {
+	margin-left: 25%;
+}
 
-	li {
-		a {
+.top-header {
+	position: fixed;
+}
 
-			&.active {
-				.badge {
-					background-color: #00BFFF;
-				}	
-			}
+.side-navigation-wrapper {
+	position: fixed;
+	ul.side-navigation {
+		.badge {
+			margin-right: 10px;
 		}
+
+		li {
+			a {
+
+				&.active {
+					.badge {
+						background-color: #00BFFF;
+					}	
+				}
+			}
+		}	
 	}	
 }
+
