@@ -1,3 +1,7 @@
+/*************************************
+* HTML elements
+**************************************/
+
 html {
 	overflow: auto;
 }
@@ -6,6 +10,10 @@ h1 {
 	color: black;
     font-weight: bold;
 }
+
+/*************************************
+* Bootstrap UI elements
+**************************************/
 
 .badge {
 
@@ -26,6 +34,44 @@ h1 {
 		}
 	}
 }
+
+.modal-header {
+	border-bottom: none;
+
+	.modal-title {
+		color: #000000;
+	}
+}
+
+.modal-footer {
+	border-top: none;
+
+	.btn {
+		background: none;
+		color: #00BFFF;
+		font-weight: bold;
+
+		&.btn-more-info {
+			float: left;
+		}
+
+		&.btn-got-it {
+
+		}
+	}
+}
+
+@media (min-width: $screen-sm) {
+
+	.modal-dialog {
+	    margin-top: 200px;
+	}	
+}
+
+
+/*************************************
+* Layout elements
+**************************************/
 
 .page {
 	margin-left: 25%;

@@ -9,7 +9,7 @@ angular.module('app.toDo').controller('GreetingModalCtrl', function ($scope, $ui
     var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
       templateUrl: 'myModalContent.html',
-      controller: 'GrettingModalInstanceCtrl',
+      controller: 'GreetingModalInstanceCtrl',
       size: size,
       resolve: {
         items: function () {
@@ -28,5 +28,7 @@ angular.module('app.toDo').controller('GreetingModalCtrl', function ($scope, $ui
   $scope.toggleAnimation = function () {
     $scope.animationsEnabled = !$scope.animationsEnabled;
   };
+
+  $scope.open();
 
 });

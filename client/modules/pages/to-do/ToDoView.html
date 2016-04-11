@@ -43,4 +43,19 @@
 	<div class="submit-wrapper">
 		<input type="submit" value="SUBMIT" />
 	</div>
+
+	<div ng-controller="GreetingModalCtrl">
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Hi Terry Traveler,</h3>
+        </div>
+        <div class="modal-body">
+        	<p>You have completed all the required information! Please click on SUBMIT when you are ready to submit the information</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-more-info" type="button" ng-click="ok()">MORE INFO</button>
+            <button class="btn btn-got-it" type="button" ng-click="cancel()">GOT IT</button>
+        </div>
+    </script>
+</div>
 </div>
