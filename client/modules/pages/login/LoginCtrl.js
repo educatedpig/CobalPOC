@@ -17,6 +17,7 @@
 
       $scope.jumpProject = function(){
         $('#gn-menu').show();
+        $('#gn-logout').show();
         $location.path('project-initiation');
       }
       init();

@@ -21,6 +21,7 @@
         ,'restangular'
         ,'app.login'
         ,'app.projectInitiation'
+        ,'app.questionnaire'
 
 
     ])
