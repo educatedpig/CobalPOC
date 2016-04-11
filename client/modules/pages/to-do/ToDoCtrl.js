@@ -6,7 +6,7 @@
 
     toDoModule.controller('ToDoCtrl', ToDoCtrl);
 
-    function ToDoCtrl () {
+    function ToDoCtrl ($scope,$location) {
 
       // Bindings
       var ToDoCtrl = this;
@@ -14,6 +14,12 @@
       // ToDoCtrl.var = 'foo';
 
       console.log('ToDo Controller Works!');
+
+      $scope.jumpToQuestionnaire = function(){
+        $('#gn-menu').show();
+        $('#gn-logout').show();
+        $location.path('questionnaire');
+      }
 
       init();
 

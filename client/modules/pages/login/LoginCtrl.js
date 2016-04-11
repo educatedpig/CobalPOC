@@ -15,10 +15,10 @@
 
       console.log('Login Controller Works!');
 
-      $scope.jumpProject = function(){
+      $scope.jumpToDo = function(){
         $('#gn-menu').show();
         $('#gn-logout').show();
-        $location.path('project-initiation');
+        $location.path('to-do');
       }
       init();
 
