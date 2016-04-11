@@ -21,7 +21,7 @@
         ,'restangular'
         ,'app.login'
         ,'app.projectInitiation'
-
+        ,'app.toDo'
 
     ])
 })(); 

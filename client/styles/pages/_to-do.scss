@@ -1,0 +1,17 @@
+.to-do.page {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.questionnaire-wrapper {
+	font-size: 24px;
+
+	.panel {
+		padding: 15px 25px;
+	}
+
+	input[type=submit] {
+		font-size: 18px;
+    	padding: 5px 10px;
+	}
+}
