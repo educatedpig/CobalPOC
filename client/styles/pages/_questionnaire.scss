@@ -60,3 +60,19 @@ body {
   border-right-width:5px;
 }
 
+
+
+.panel-body{
+  .questionnaire-form-input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 8px 0;
+    margin: 8px 0 8px 8px;
+    display: inline-block;
+    float: left;
+  }
+  #firstname, #middlename, #lastname{
+    width: 30%;
+  }
+}

@@ -1,11 +1,12 @@
-<div id="masthead">  
+<div id="masthead">
   <div class="container">
-      <div class="row">
-		<div class="page-header">
-		  <h1>Questionnaire <br/><small>Saudi Arabia Business Visa</small></h1>
-		</div>
+    <div class="row">
+			<div class="col-md-9 col-md-offset-3 page-header">
+			  <h1>Questionnaire</h1>
+				<h2>Saudi Arabia Business Visa</h2>
+			</div>
         <!-- <div class="col-md-5">
-            <div class="well well-lg"> 
+            <div class="well well-lg">
               <div class="row">
                 <div class="col-sm-6">
         	      	<img src="//placehold.it/180x100" class="img-responsive">
@@ -16,26 +17,26 @@
               </div>
             </div>
         </div> -->
-      </div> 
+    </div>
   </div><!--/container-->
 </div><!--/masthead-->
 <!--main-->
 <div class="container">
 	<div class="row">
       <!--left-->
-      <div class="col-md-3" id="leftCol">
-        <ul class="nav nav-stacked" id="sidebar">
-		  <li role="presentation"><a href="#basic-information" class="active"><span class="badge">1</span> Profile</a></li>
-		  <li role="presentation"><a href="#contact-information"><span class="badge">2</span> Contact information</a></li>
-		  <li role="presentation"><a href="#citizenship"><span class="badge">3</span> Citizenship</a></li>
-		  <li role="presentation"><a href="#education-history"><span class="badge">4</span> Education history</a></li>
-		  <li role="presentation"><a href="#future-travel"><span class="badge">5</span> Future travel</a></li>
+      <div class="col-md-3 side-navigation-wrapper" id="leftCol">
+        <ul class="nav nav-stacked side-navigation" id="sidebar">
+		  <li role="presentation"><a href="#basic-information" ng-class="{active: QuestionnaireCtrl.isActive('basic-information')}" ng-click="QuestionnaireCtrl.setActive('basic-information')"><span class="badge">1</span> Basic Information</a></li>
+		  <li role="presentation"><a href="#contact-information" ng-class="{active: QuestionnaireCtrl.isActive('contact-information')}" ng-click="QuestionnaireCtrl.setActive('contact-information')"><span class="badge">2</span> Contact information</a></li>
+		  <li role="presentation"><a href="#citizenship" ng-class="{active: QuestionnaireCtrl.isActive('citizenship')}" ng-click="QuestionnaireCtrl.setActive('citizenship')"><span class="badge">3</span> Citizenship</a></li>
+		  <li role="presentation"><a href="#education-history" ng-class="{active: QuestionnaireCtrl.isActive('education-history')}" ng-click="QuestionnaireCtrl.setActive('education-history')"><span class="badge">4</span> Education history</a></li>
+		  <li role="presentation"><a href="#future-travel" ng-class="{active: QuestionnaireCtrl.isActive('future-travel')}" ng-click="QuestionnaireCtrl.setActive('future-travel')"><span class="badge">5</span> Future travel</a></li>
 <!-- 		  <li role="presentation"><a href="#sec4"><span class="badge">6</span> Immigration documents</a></li>
 		  <li role="presentation"><a href="#sec4"><span class="badge">7</span> Family members</a></li>
 		  <li role="presentation"><a href="#sec4"><span class="badge">8</span> Additional questions</a></li> -->
         </ul>
       </div><!--/left-->
-      
+
       <!--right-->
       <div class="col-md-9">
       <section class="panel panel-default" id="basic-information">
@@ -43,67 +44,26 @@
 		<div class="panel-body">
 			<form>
 			  <fieldset class="form-group">
-			    <label for="exampleInputEmail1">Email address</label>
-			    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-			    <small class="text-muted">We'll never share your email with anyone else.</small>
+			    <input type="input" class="form-control questionnaire-form-input" id="firstname" placeholder="Legal first name *">
+					<input type="input" class="form-control questionnaire-form-input" id="middlename" placeholder="Legal middle name">
+					<input type="input" class="form-control questionnaire-form-input" id="lastname" placeholder="Legal last name *">
 			  </fieldset>
-			  <fieldset class="form-group">
-			    <label for="exampleInputPassword1">Password</label>
-			    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				<fieldset class="form-group">
+					<input type="radio" name="gender" value="male" checked> Male
+				  <input type="radio" name="gender" value="female"> Female
+				  <input type="radio" name="gender" value="other"> Other
 			  </fieldset>
-			  <fieldset class="form-group">
-			    <label for="exampleSelect1">Example select</label>
-			    <select class="form-control" id="exampleSelect1">
-			      <option>1</option>
-			      <option>2</option>
-			      <option>3</option>
-			      <option>4</option>
-			      <option>5</option>
-			    </select>
-			  </fieldset>
-			  <fieldset class="form-group">
-			    <label for="exampleSelect2">Example multiple select</label>
+				<fieldset class="form-group">
+			    <label for="exampleSelect2">Marital Status</label>
 			    <select multiple class="form-control" id="exampleSelect2">
-			      <option>1</option>
-			      <option>2</option>
-			      <option>3</option>
-			      <option>4</option>
-			      <option>5</option>
+			      <option>Single</option>
+			      <option>Married</option>
+			      <option>Divorced</option>
 			    </select>
 			  </fieldset>
-			  <fieldset class="form-group">
-			    <label for="exampleTextarea">Example textarea</label>
-			    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+				<fieldset class="form-group">
+					<input type="date" name="bday">
 			  </fieldset>
-			  <fieldset class="form-group">
-			    <label for="exampleInputFile">File input</label>
-			    <input type="file" class="form-control-file" id="exampleInputFile">
-			    <small class="text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
-			  </fieldset>
-			  <div class="radio">
-			    <label>
-			      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-			      Option one is this and that&mdash;be sure to include why it's great
-			    </label>
-			  </div>
-			  <div class="radio">
-			    <label>
-			      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-			      Option two can be something else and selecting it will deselect option one
-			    </label>
-			  </div>
-			  <div class="radio disabled">
-			    <label>
-			      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-			      Option three is disabled
-			    </label>
-			  </div>
-			  <div class="checkbox">
-			    <label>
-			      <input type="checkbox"> Check me out
-			    </label>
-			  </div>
-			  <button type="submit" class="btn btn-primary">Submit</button>
 			</form>
 		</div>
 	</section>
