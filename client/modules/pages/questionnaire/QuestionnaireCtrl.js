@@ -6,15 +6,20 @@
 
     QuestionnaireModule.controller('QuestionnaireCtrl', QuestionnaireCtrl);
 
-    function QuestionnaireCtrl () {
+    QuestionnaireCtrl.$inject = ['QuestionnaireModel', 'localStorageService'];
+
+    function QuestionnaireCtrl (QuestionnaireModel, localStorageService) {
 
       // Bindings
       var QuestionnaireCtrl = this;
+
+      // Objects that will hold the data
+      QuestionnaireCtrl.questionnaire = {};
+      QuestionnaireCtrl.questionnaire.basicInformation = {};
       QuestionnaireCtrl.currentActive = '';
+      QuestionnaireCtrl.saveQuestionnaire = saveQuestionnaire;
       // define variables
       // QuestionnaireCtrl.var = 'foo';
-
-      console.log('Questionnaire Controller Works!');
 
       QuestionnaireCtrl.isActive = function(navItem) {
         return QuestionnaireCtrl.currentActive === navItem;
@@ -27,6 +32,13 @@
       init();
 
       function init() {
+
+        var questionnaireData = QuestionnaireModel.read();
+
+        if (questionnaireData) {
+          QuestionnaireCtrl.questionnaire = questionnaireData;
+        }
+
         $('#gn-menu').show();
         $('#gn-logout').show();
         /* activate sidebar */
@@ -58,6 +70,13 @@
               }
             }
         });
+      }
+
+      // Functions
+      function saveQuestionnaire (form, data) {
+        var questionnaireInstance;
+
+        questionnaireInstance = QuestionnaireModel.create(data);  
       }
     }
 

@@ -43,28 +43,69 @@
       <section class="panel panel-default" id="basic-information">
       	<div class="panel-heading">Basic Information</div>
 		<div class="panel-body">
-			<form>
-			  <fieldset class="form-group">
-			    <input type="input" class="form-control questionnaire-form-input" id="firstname" placeholder="Legal first name *">
-					<input type="input" class="form-control questionnaire-form-input" id="middlename" placeholder="Legal middle name">
-					<input type="input" class="form-control questionnaire-form-input" id="lastname" placeholder="Legal last name *">
-			  </fieldset>
+			<form name="questionnaireForm">
+			    <fieldset class="form-group">
+					<input type="input" ng-model="QuestionnaireCtrl.questionnaire.basicInformation.prefix" class="form-control questionnaire-form-input" id="prefix" placeholder="Mr.">
+			    </fieldset>
+			    <fieldset class="form-group">
+				    <input type="input" ng-model="QuestionnaireCtrl.questionnaire.basicInformation.firstname" class="form-control questionnaire-form-input" id="firstname" placeholder="Legal first name *">
+					<input type="input" ng-model="QuestionnaireCtrl.questionnaire.basicInformation.middlename" class="form-control questionnaire-form-input" id="middlename" placeholder="Legal middle name">
+					<input type="input" class="form-control questionnaire-form-input" id="lastname" ng-model="QuestionnaireCtrl.questionnaire.basicInformation.lastname" placeholder="Legal last name *">
+			    </fieldset>
+			    <fieldset class="form-group">
+			    	<input type="input" ng-model="QuestionnaireCtrl.questionnaire.basicInformation.preferredFirstName" class="form-control questionnaire-form-input" id="preferredFirstName" placeholder="Preferred First Name">
+			    </fieldset>
+			    <fieldset class="form-group">
+			    	<input type="input" ng-model="QuestionnaireCtrl.questionnaire.basicInformation.maidenOtherNames" class="form-control questionnaire-form-input" id="maidenOtherNames" placeholder="Maiden/Other names">
+			    </fieldset>
+			    <fieldset class="form-group">
+				    	<input type="input" ng-model="QuestionnaireCtrl.questionnaire.basicInformation.countryOfBirth" class="form-control questionnaire-form-input" id="countryOfBirth" placeholder="Country of birth">
+				  </fieldset>
+				  <fieldset class="form-group">
+				    	<input type="input" ng-model="QuestionnaireCtrl.questionnaire.basicInformation.cityOfBirth" class="form-control questionnaire-form-input" id="cityOfBirth" placeholder="City of birth">
+				  </fieldset>
+				  <fieldset class="form-group">
+				    	<input type="input" ng-model="QuestionnaireCtrl.questionnaire.basicInformation.stateProvinceOfBirth" class="form-control questionnaire-form-input" id="stateProvinceOfBirth" placeholder="State/Province of Birth">
+				  </fieldset>
+				  <fieldset class="form-group">
+				    	<input type="input" ng-model="QuestionnaireCtrl.questionnaire.basicInformation.citizenship" class="form-control questionnaire-form-input" id="citizenship" placeholder="Citizenship">
+				  </fieldset>
 				<fieldset class="form-group">
-					<input type="radio" name="gender" value="male" checked> Male
-				  <input type="radio" name="gender" value="female"> Female
-				  <input type="radio" name="gender" value="other"> Other
-			  </fieldset>
+					<div class="col-sm-2">
+							<label for="gender">Gender</label>
+					</div>
+					<div class="col-sm-10">
+						<input ng-model="QuestionnaireCtrl.questionnaire.basicInformation.gender" type="radio" name="gender" value="male" checked> Male
+					    <input ng-model="QuestionnaireCtrl.questionnaire.basicInformation.gender" type="radio" name="gender" value="female"> Female
+					    <input ng-model="QuestionnaireCtrl.questionnaire.basicInformation.gender" type="radio" name="gender" value="other"> Other
+			    	</div>
+			    </fieldset>
 				<fieldset class="form-group">
-			    <label for="exampleSelect2">Marital Status</label>
-			    <select multiple class="form-control" id="exampleSelect2">
-			      <option>Single</option>
-			      <option>Married</option>
-			      <option>Divorced</option>
-			    </select>
-			  </fieldset>
+						<div class="col-sm-2">
+							<label for="maritalStatus">Marital Status</label>
+						</div>
+						<div class="col-sm-4">
+							<select ng-model="QuestionnaireCtrl.questionnaire.basicInformation.maritalStatus" class="form-control" id="maritalStatus">
+						      <option value="">Select</option>
+						      <option>Single</option>
+						      <option>Married</option>
+						      <option>Divorced</option>
+						    </select>
+						</div>		
+			    </fieldset>
 				<fieldset class="form-group">
-					<input type="date" name="bday">
+					<div class="col-sm-2">
+						<label for="dateOfBirth">Date of birth</label>
+					</div>
+					<div class="col-sm-2">
+						<input ng-model="QuestionnaireCtrl.questionnaire.basicInformation.dateOfBirth" type="date" name="bday">
+					</div>
 			  </fieldset>
+			  
+			  <div class="col-sm-12">
+			  	<button type="submit" class="btn btn-primary" ng-click="QuestionnaireCtrl.saveQuestionnaire(questionnaireForm, QuestionnaireCtrl.questionnaire, 'create')">Submit</button>
+			  </div>
+			  
 			</form>
 		</div>
 	</section>

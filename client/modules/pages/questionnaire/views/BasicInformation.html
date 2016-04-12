@@ -1,15 +1,18 @@
-<div class="col-sm-3 side-navigation-wrapper">
-    <ul class="nav nav-pills nav-stacked side-navigation">
-      <li role="presentation"><a href="#/questionnaire/basic-information" scroll-to="basic-information" ng-class="{active: QuestionnaireCtrl.isActive('basic-information')}" ng-click="QuestionnaireCtrl.setActive('basic-information')"><span class="badge">1</span> Basic information</a></li>
-      <li role="presentation"><a href="#" scroll-to="contact-information" ng-class="{active: QuestionnaireCtrl.isActive('contact-information')}" ng-click="QuestionnaireCtrl.setActive('contact-information')"><span class="badge">2</span> Contact information</a></li>
-      <li role="presentation"><a href="#" scroll-to="citizenship" ng-class="{active: QuestionnaireCtrl.isActive('citizenship')}" ng-click="QuestionnaireCtrl.setActive('citizenship')"><span class="badge">3</span> Citizenship</a></li>
-      <li role="presentation"><a href="#" scroll-to="education-history" ng-class="{active: QuestionnaireCtrl.isActive('education-history')}" ng-click="QuestionnaireCtrl.setActive('education-history')"><span class="badge">4</span> Education history</a></li>
-      <li role="presentation"><a href="#" scroll-to="future-travel" ng-class="{active: QuestionnaireCtrl.isActive('future-travel')}" ng-click="QuestionnaireCtrl.setActive('future-travel')"><span class="badge">5</span> Future travel</a></li>
-      <li role="presentation"><a href="#" scroll-to="immigration-documents" ng-class="{active: QuestionnaireCtrl.isActive('immigration-documents')}" ng-click="QuestionnaireCtrl.setActive('immigration-documents')"><span class="badge">6</span> Immigration documents</a></li>
-      <li role="presentation"><a href="#" scroll-to="family-members" ng-class="{active: QuestionnaireCtrl.isActive('family-members')}" ng-click="QuestionnaireCtrl.setActive('family-members')"><span class="badge">7</span> Family members</a></li>
-      <li role="presentation"><a href="#" scroll-to="additional-questions" ng-class="{active: QuestionnaireCtrl.isActive('additional-questions')}" ng-click="QuestionnaireCtrl.setActive('additional-questions')"><span class="badge">8</span> Additional questions</a></li>
-    </ul>
-</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-3 side-navigation-wrapper" id="leftCol">
+        	<ul class="nav nav-stacked side-navigation" id="sidebar">
+		      <li role="presentation"><a href="#/questionnaire/basic-information" scroll-to="basic-information" ng-class="{active: QuestionnaireCtrl.isActive('basic-information')}" ng-click="QuestionnaireCtrl.setActive('basic-information')"><span class="badge">1</span> Basic information</a></li>
+		      <li role="presentation"><a href="#" scroll-to="contact-information" ng-class="{active: QuestionnaireCtrl.isActive('contact-information')}" ng-click="QuestionnaireCtrl.setActive('contact-information')"><span class="badge">2</span> Contact information</a></li>
+		      <li role="presentation"><a href="#" scroll-to="citizenship" ng-class="{active: QuestionnaireCtrl.isActive('citizenship')}" ng-click="QuestionnaireCtrl.setActive('citizenship')"><span class="badge">3</span> Citizenship</a></li>
+		      <li role="presentation"><a href="#" scroll-to="education-history" ng-class="{active: QuestionnaireCtrl.isActive('education-history')}" ng-click="QuestionnaireCtrl.setActive('education-history')"><span class="badge">4</span> Education history</a></li>
+		      <li role="presentation"><a href="#" scroll-to="future-travel" ng-class="{active: QuestionnaireCtrl.isActive('future-travel')}" ng-click="QuestionnaireCtrl.setActive('future-travel')"><span class="badge">5</span> Future travel</a></li>
+		      <li role="presentation"><a href="#" scroll-to="immigration-documents" ng-class="{active: QuestionnaireCtrl.isActive('immigration-documents')}" ng-click="QuestionnaireCtrl.setActive('immigration-documents')"><span class="badge">6</span> Immigration documents</a></li>
+		      <li role="presentation"><a href="#" scroll-to="family-members" ng-class="{active: QuestionnaireCtrl.isActive('family-members')}" ng-click="QuestionnaireCtrl.setActive('family-members')"><span class="badge">7</span> Family members</a></li>
+		      <li role="presentation"><a href="#" scroll-to="additional-questions" ng-class="{active: QuestionnaireCtrl.isActive('additional-questions')}" ng-click="QuestionnaireCtrl.setActive('additional-questions')"><span class="badge">8</span> Additional questions</a></li>
+		    </ul>
+		</div>
+
 <div class="questionnaire page col-sm-9">
 	<div class="page-header">
 	  <h1>Basic information <br/><small>change your basic information here</small></h1>
@@ -71,4 +74,6 @@
 			</form>
 		</div>
 	</section>
+</div>
+</div>
 </div>

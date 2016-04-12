@@ -20,6 +20,7 @@
         //plugins
         ,'ui.bootstrap'
         ,'smoothScroll'
+        ,'LocalStorageModule'
 
         // pages
         ,'restangular'
