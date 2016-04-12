@@ -27,7 +27,7 @@
         ,'app.login'
         ,'app.questionnaire'
         ,'app.toDo'
-
+        ,'app.documentUpload'
     ])
 })(); 
 

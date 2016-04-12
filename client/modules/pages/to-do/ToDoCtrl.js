@@ -21,6 +21,12 @@
         $location.path('questionnaire');
       }
 
+      $scope.jumpToDocumentUpload = function(){
+        $('#gn-menu').show();
+        $('#gn-logout').show();
+        $location.path('documentUpload');
+      }
+
       init();
 
       function init() {

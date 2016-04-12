@@ -1,0 +1,227 @@
+<div id="masthead">
+  <div class="container">
+    <div class="row">
+			<div class="col-md-9 col-md-offset-3 page-header">
+			  <h1>Document Upload</h1>
+				<h2>Saudi Arabia Business Visa</h2>
+				<h5>Let's get started by getting some basic documents from you! Not all fields are required, but filling out optional fields could speed up our processing time.</h3>
+			</div>
+    </div>
+  </div><!--/container-->
+</div><!--/masthead-->
+<!--main-->
+<div class="container">
+	<div class="row">
+      <!--left-->
+      <div class="col-md-3 side-navigation-wrapper" id="leftCol">
+        <ul class="nav nav-stacked side-navigation" id="sidebar">
+		  <li role="presentation"><a href="#passports" ng-class="{active: DocumentUploadCtrl.isActive('passports')}" ng-click="DocumentUploadCtrl.setActive('passports')"><span class="badge">1</span> Passports</a></li>
+		  <li role="presentation"><a href="#immigration-documents" ng-class="{active: DocumentUploadCtrl.isActive('immigration-documents')}" ng-click="DocumentUploadCtrl.setActive('immigration-documents')"><span class="badge">2</span> Immigration Documents</a></li>
+		  <li role="presentation"><a href="#diplomas" ng-class="{active: DocumentUploadCtrl.isActive('diplomas')}" ng-click="DocumentUploadCtrl.setActive('diplomas')"><span class="badge">3</span> Diplomas</a></li>
+		  <li role="presentation"><a href="#additional-documents" ng-class="{active: DocumentUploadCtrl.isActive('additional-documents')}" ng-click="DocumentUploadCtrl.setActive('additional-documents')"><span class="badge">4</span> Additional Documents</a></li>
+<!-- 		  <li role="presentation"><a href="#sec4"><span class="badge">6</span> Immigration documents</a></li>
+		  <li role="presentation"><a href="#sec4"><span class="badge">7</span> Family members</a></li>
+		  <li role="presentation"><a href="#sec4"><span class="badge">8</span> Additional questions</a></li> -->
+        </ul>
+      </div><!--/left-->
+
+      <!--right-->
+      <div class="col-md-9">
+      <section class="panel panel-default" id="passports">
+      	<div class="panel-heading">Passports</div>
+		<div class="panel-body">
+			<form>
+			  <fieldset class="form-group">
+			    <input type="input" class="form-control questionnaire-form-input" id="country" placeholder="Country">
+				<input type="input" class="form-control questionnaire-form-input" id="passportNumber" placeholder="Passport#">
+			  </fieldset>
+			  <fieldset class="form-group">
+				<label>Issued Date</label>
+				<input ng-model="DocumentUploadCtrl.passport.issuedDate" type="date" name="issueDate">
+				<label style="margin-left: 150px">Expiration Date</label>
+				<input ng-model="DocumentUploadCtrl.passport.expirationDate" type="date" name="expirationDate">
+			  </fieldset>
+			   <fieldset class="form-group">
+			    <label for="exampleInputFile">Upload Passports</label>
+			    <input type="file" class="form-control-file" id="exampleInputFile">
+			    <small class="text-muted">Please upload your current passport(s).</small>
+			  </fieldset>
+			  <button type="save" class="btn btn-primary">Save</button>
+			</form>
+		</div>
+	</section>
+	<section class="panel panel-default" id="immigration-documents">
+      	<div class="panel-heading">Immigration Documents</div>
+		<div class="panel-body">
+			<form>
+			  <fieldset class="form-group">
+			    <input type="input" class="form-control questionnaire-form-input" id="dateApplied" placeholder="Date Applied">
+				<md-input-container style="width: 172px;">
+		        <label>Applied at Country</label>
+		        <md-select ng-model="userState">
+		          <md-option ng-repeat="state in states" value="{{state.abbrev}}" ng-disabled="$index === 1">
+		            {{state.abbrev}}
+		          </md-option>
+		        </md-select>
+		      </md-input-container>
+			  </fieldset>
+			  <fieldset class="form-group">
+				<div ng-controller="AppCtrl" style="padding:0px;height: 40px;" ng-cloak="" class="datepickerdemoBasicUsage" ng-app="MyApp">
+				  <md-content id="passportDate">
+				    <label>Issued Date</label>
+				    <md-datepicker ng-model="issuedDate" md-placeholder="Enter date"></md-datepicker>
+				    <label>Expiration Date</label>
+				    <md-datepicker ng-model="expirationDate" md-placeholder="Enter date"></md-datepicker>
+				  </md-content>
+				</div>
+			  </fieldset>
+			   <fieldset class="form-group">
+			    <label for="exampleInputFile">Upload Passports</label>
+			    <input type="file" class="form-control-file" id="exampleInputFile">
+			    <small class="text-muted">Please upload your current passport(s).</small>
+			  </fieldset>
+			  <button type="save" class="btn btn-primary">Save</button>
+			</form>
+		</div>
+	</section>
+	<section class="panel panel-default" id="diplomas">
+      	<div class="panel-heading">Diplomas</div>
+		<div class="panel-body">
+			<form>
+			  <fieldset class="form-group">
+			    <label for="exampleInputEmail1">Email address</label>
+			    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+			    <small class="text-muted">We'll never share your email with anyone else.</small>
+			  </fieldset>
+			  <fieldset class="form-group">
+			    <label for="exampleInputPassword1">Password</label>
+			    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+			  </fieldset>
+			  <fieldset class="form-group">
+			    <label for="exampleSelect1">Example select</label>
+			    <select class="form-control" id="exampleSelect1">
+			      <option>1</option>
+			      <option>2</option>
+			      <option>3</option>
+			      <option>4</option>
+			      <option>5</option>
+			    </select>
+			  </fieldset>
+			  <fieldset class="form-group">
+			    <label for="exampleSelect2">Example multiple select</label>
+			    <select multiple class="form-control" id="exampleSelect2">
+			      <option>1</option>
+			      <option>2</option>
+			      <option>3</option>
+			      <option>4</option>
+			      <option>5</option>
+			    </select>
+			  </fieldset>
+			  <fieldset class="form-group">
+			    <label for="exampleTextarea">Example textarea</label>
+			    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+			  </fieldset>
+			  <fieldset class="form-group">
+			    <label for="exampleInputFile">File input</label>
+			    <input type="file" class="form-control-file" id="exampleInputFile">
+			    <small class="text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+			  </fieldset>
+			  <div class="radio">
+			    <label>
+			      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+			      Option one is this and that&mdash;be sure to include why it's great
+			    </label>
+			  </div>
+			  <div class="radio">
+			    <label>
+			      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+			      Option two can be something else and selecting it will deselect option one
+			    </label>
+			  </div>
+			  <div class="radio disabled">
+			    <label>
+			      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+			      Option three is disabled
+			    </label>
+			  </div>
+			  <div class="checkbox">
+			    <label>
+			      <input type="checkbox"> Check me out
+			    </label>
+			  </div>
+			  <button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</section>
+	<section class="panel panel-default" id="additional-documents">
+      	<div class="panel-heading">Additional Documents</div>
+		<div class="panel-body">
+			<form>
+			  <fieldset class="form-group">
+			    <label for="exampleInputEmail1">Email address</label>
+			    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+			    <small class="text-muted">We'll never share your email with anyone else.</small>
+			  </fieldset>
+			  <fieldset class="form-group">
+			    <label for="exampleInputPassword1">Password</label>
+			    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+			  </fieldset>
+			  <fieldset class="form-group">
+			    <label for="exampleSelect1">Example select</label>
+			    <select class="form-control" id="exampleSelect1">
+			      <option>1</option>
+			      <option>2</option>
+			      <option>3</option>
+			      <option>4</option>
+			      <option>5</option>
+			    </select>
+			  </fieldset>
+			  <fieldset class="form-group">
+			    <label for="exampleSelect2">Example multiple select</label>
+			    <select multiple class="form-control" id="exampleSelect2">
+			      <option>1</option>
+			      <option>2</option>
+			      <option>3</option>
+			      <option>4</option>
+			      <option>5</option>
+			    </select>
+			  </fieldset>
+			  <fieldset class="form-group">
+			    <label for="exampleTextarea">Example textarea</label>
+			    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+			  </fieldset>
+			  <fieldset class="form-group">
+			    <label for="exampleInputFile">File input</label>
+			    <input type="file" class="form-control-file" id="exampleInputFile">
+			    <small class="text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+			  </fieldset>
+			  <div class="radio">
+			    <label>
+			      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+			      Option one is this and that&mdash;be sure to include why it's great
+			    </label>
+			  </div>
+			  <div class="radio">
+			    <label>
+			      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+			      Option two can be something else and selecting it will deselect option one
+			    </label>
+			  </div>
+			  <div class="radio disabled">
+			    <label>
+			      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+			      Option three is disabled
+			    </label>
+			  </div>
+			  <div class="checkbox">
+			    <label>
+			      <input type="checkbox"> Check me out
+			    </label>
+			  </div>
+			  <button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</section>
+        </div><!--/right-->
+  	</div><!--/row-->
+</div><!--/container-->
