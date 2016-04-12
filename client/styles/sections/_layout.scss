@@ -31,7 +31,16 @@ h1 {
 		.panel-heading {
 			background-color: #00BFFF;	
 			color: #FFFFFF;
+
+			a.action {
+				float: right;
+				color: #FFFFFF;
+			}
 		}
+	}
+
+	.panel-body {
+		padding: 25px 15px;
 	}
 }
 
@@ -77,6 +86,10 @@ h1 {
 	margin-left: 25%;
 }
 
+.page-header {
+	border-bottom: none;
+}
+
 .top-header {
 	position: fixed;
 }
@@ -101,3 +114,10 @@ h1 {
 	}	
 }
 
+/*****************************************
+* forms
+******************************************/
+
+.form-group {
+	color: #767676;
+}

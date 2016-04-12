@@ -18,6 +18,12 @@
           templateUrl: 'modules/pages/questionnaire/QuestionnaireView.html',
           controller: 'QuestionnaireCtrl',
           controllerAs: 'QuestionnaireCtrl',
-        });
+        })
+        .when('/questionnaire/basic-information', {
+          templateUrl: 'modules/pages/questionnaire/views/BasicInformation.html',
+          controller: 'QuestionnaireCtrl',
+          controllerAs: 'QuestionnaireCtrl',
+        })
+        ;
     }
 })();
