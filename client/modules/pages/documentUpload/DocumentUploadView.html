@@ -37,8 +37,8 @@
 			  </fieldset>
 			  <fieldset class="form-group">
 				<label>Issued Date</label>
-				<input ng-model="DocumentUploadCtrl.passport.issuedDate" type="date" name="issueDate">
-				<label style="margin-left: 150px">Expiration Date</label>
+				<input ng-model="DocumentUploadCtrl.passport.issuedDate" type="date" name="issuedDate">
+				<label>Expiration Date</label>
 				<input ng-model="DocumentUploadCtrl.passport.expirationDate" type="date" name="expirationDate">
 			  </fieldset>
 			   <fieldset class="form-group">
@@ -55,15 +55,9 @@
 		<div class="panel-body">
 			<form>
 			  <fieldset class="form-group">
-			    <input type="input" class="form-control questionnaire-form-input" id="dateApplied" placeholder="Date Applied">
-				<md-input-container style="width: 172px;">
-		        <label>Applied at Country</label>
-		        <md-select ng-model="userState">
-		          <md-option ng-repeat="state in states" value="{{state.abbrev}}" ng-disabled="$index === 1">
-		            {{state.abbrev}}
-		          </md-option>
-		        </md-select>
-		      </md-input-container>
+				<label>Date Applied</label>
+				<input ng-model="DocumentUploadCtrl.passport.appliedDate" type="date" name="appliedDate">
+				<select class="form-control bfh-countries" data-country="US"></select>
 			  </fieldset>
 			  <fieldset class="form-group">
 				<div ng-controller="AppCtrl" style="padding:0px;height: 40px;" ng-cloak="" class="datepickerdemoBasicUsage" ng-app="MyApp">
